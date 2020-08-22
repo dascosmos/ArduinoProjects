@@ -3,20 +3,20 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-MY_ADDRESS = 'tite.kubo033@gmail.com'
-PASSWORD = 'Natsu.123'
+MY_ADDRESS = # 'your email'
+PASSWORD = # 'password'
 
 # funcion para enviar el mensaje
 def send_message():
     s = smtplib.SMTP(host='smtp.gmail.com', port=587) #conexion a servidor smtp
     s.starttls() # iniciar protocolo de seguridad
-    s.login(MY_ADDRESS, PASSWORD) # iniciac sesion en la cuenta
+    s.login(MY_ADDRESS, PASSWORD) # iniciar sesion en la cuenta
 
 
-    msg = MIMEMultipart() # inicializar mensaje
+    msg = MIMEMultipart() # inicializar el cuerpo mensaje
 
     msg['From'] = MY_ADDRESS # quien es el remitente del mensaje
-    msg['To'] = 'david.salazar033@outlook.com' # a quien va dirigido el mensaje
+    msg['To'] = #'receiver mail' # a quien va dirigido el mensaje
     msg['Subject'] = 'Alerta de movimiento' # Asunto del mensaje
 
     msg.attach(MIMEText("Este es un aviso que alguien se ha movido dentro del rango del sensor", 'plain')) # Cuerpo del mensaje
